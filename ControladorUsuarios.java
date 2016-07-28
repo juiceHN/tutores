@@ -33,6 +33,30 @@ public class ControladorUsuarios {
 				
 		}
 	}
+	
+		public String mostrarUsuario(){
+		String nombre = "";
+		if (listaUsuarios.size() !=0){
+			for (int i=0; i<listaUsuarios.size(); i++){
+				 nombre = listaUsuarios.get(i).getNombre();
+				
+			}
+		}
+		return nombre;
+	}
+	
+	public String mostrarContrsaena(){
+		String contra = "";
+		if (listaUsuarios.size() !=0){
+			for (int i=0; i<listaUsuarios.size(); i++){
+				 contra = listaUsuarios.get(i).getContrasena();
+				
+			}
+		}
+		return contra;
+		
+		
+	}
 	//Metodo para crear nuevo usuario
 	public void nuevoUsuario (String nombre, String contraseña, int tipo){
 		Usuario nuevoUs = new Usuario (nombre, contraseña, tipo, idUsuario+1);

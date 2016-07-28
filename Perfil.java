@@ -1,3 +1,13 @@
+//Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 2
+//Juan Carlos Tapia
+//Hugo Noriega
+//Rodrigo Castro
+//Leonel Guillen
+//Clase Perfil
+//Clase encargada del perfil
+
 package com.nor.hugo.tutorgt;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,14 +18,14 @@ import android.view.ViewGroup;
 
 public class Perfil extends Fragment{
 
-
+//Definicion de variables
     @Nullable
     private String nombre;
     private int edad;
     private String infoP;
     private String correo;
     private int numeroCel;
-
+//Set and gets
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

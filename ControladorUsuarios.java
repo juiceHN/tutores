@@ -1,3 +1,12 @@
+//Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 2
+//Juan Carlos Tapia
+//Hugo Noriega
+//Rodrigo Castro
+//Leonel Guillen
+//Clase ControladorUsuario
+
 
 import java.util.ArrayList; //Se importa la libreria con la que se creara los arrays
 
@@ -8,7 +17,7 @@ public class ControladorUsuarios {
 	public ControladorUsuarios() {
 		
 	}
-
+	//Se crea la lista que contendra a los usuarios
 	public ArrayList<Usuario> getListaUsuarios() {
 		return listaUsuarios;
 	}

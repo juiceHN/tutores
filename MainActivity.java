@@ -1,3 +1,14 @@
+//Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 2
+//Juan Carlos Tapia
+//Hugo Noriega
+//Rodrigo Castro
+//Leonel Guillen
+//Clase MainActivity
+
+//Se improta paquetes necesarios para Android
+
 package apps.roddcastro.com.login;
 
 import android.content.Intent;

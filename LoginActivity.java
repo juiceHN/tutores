@@ -1,3 +1,12 @@
+ //Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 2
+//Juan Carlos Tapia
+//Hugo Noriega
+//Rodrigo Castro
+//Leonel Guillen
+//Clase LoginActivity
+ 
  * Keep track of the login task to ensure we can cancel it if requested.
      */
     private UserLoginTask mAuthTask = null;

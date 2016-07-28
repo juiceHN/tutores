@@ -1,6 +1,7 @@
 //Esto es solo un menu provicional mas adelante se pule
 package com.nor.hugo.tutorgt;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -25,12 +26,12 @@ public class Menu extends AppCompatActivity {
         bP.setOnClickListener(
                 new Button.OnClickListener(){
                     public void onClick (View v){
-
+                        Intent i =new Intent(Menu.this,Perfil.class);
+                        startActivity(i);
+                        overridePendingTransition(R.animator.animator,R.anim.animacion);
                     }
         }
         );
     }
     //public void
 }
-
-

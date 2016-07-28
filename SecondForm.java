@@ -1,3 +1,14 @@
+//Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 2
+//Juan Carlos Tapia
+//Hugo Noriega
+//Rodrigo Castro
+//Leonel Guillen
+//Clase SecondForm
+
+//Esta clase se encarga de pasar al segundo formulario una vez se haya ingresado usuario y contraseña
+//Se importan los paquetes
 package apps.roddcastro.com.login;
 
 import android.os.Bundle;

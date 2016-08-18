@@ -1,5 +1,12 @@
 // Karma configuration
 // Generated on 2016-08-17
+//Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 3
+//Hugo Noriega
+//Rodrigo Castro
+//Juan Carlos Tapia
+//Leonel Guillen
 
 module.exports = function(config) {
   'use strict';

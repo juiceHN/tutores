@@ -1,4 +1,11 @@
 // Generated on 2016-08-17 using generator-angular 0.15.1
+//Universidad del Valle de Guatemala
+//Ingenieria de Software
+//Sprint 3
+//Hugo Noriega
+//Rodrigo Castro
+//Juan Carlos Tapia
+//Leonel Guillen
 'use strict';
 
 var gulp = require('gulp');

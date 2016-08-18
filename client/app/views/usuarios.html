@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+
+
+<body ng-app="clientApp">
+
+	<table ng-controller="UsuariosCtrl" border ="1">
+		<th>Nombre</th>
+		<th>Contrasena</th>
+		<th>Telefono</th>
+		<th>Correo</th>	
+		<th>Borrar</th>	
+	  <tr ng-repeat="usuario in usuarios">
+		  
+		  <td>{{usuario.nombre}}</td>
+		  <td>{{usuario.contrasena}}</td>
+		  <td>{{usuario.telefono}}</td>
+		  <td>{{usuario.correo}}</td>
+		  <td><button data-ng-click="remove($index)">Borrar</button></td>
+		  
+		</tr>
+	</table>
+
+
+	<input type="button" value="agregar" onClick="location.href='Agregar-Usuario.html'" />
+
+<script>
+var app = angular.module("clientApp", []);
+
+  app.controller("UsuariosCtrl", function ($scope) {
+  $scope.usuarios = [
+    {
+      "nombre": 'carlos1',
+	  "contrasena": 'duhf',
+	  "telefono": '1234',
+	  "correo": 'correo1'
+    },
+    {
+      
+      'nombre': 'carlos2',
+	  'contrasena': 'duhf',
+	  'telefono': '2222',
+	  'correo': 'correo2'
+    },
+    {
+      
+      'nombre': 'carlos3',
+	  'contrasena': 'duhf',
+	  'telefono': '3333',
+	  'correo': 'correo3'
+    }
+  ];
+  $scope.remove = function(index) {
+    $scope.usuarios.splice(index, 1);
+	};
+
+  //$scope.usuarios = Usuario.getList().$object;
+});
+
+
+
+</script>
+</body >
+</html>

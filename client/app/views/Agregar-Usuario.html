@@ -1,0 +1,86 @@
+<html>
+<body ng-app="clientApp">
+
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+<link id="template-file" href="usuarios.html" rel="import" /> 
+
+
+
+<div ng-controller="AgregarUsuariosCtrl">
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Nombre</label>
+    <input type="text" ng-model="nom" class="form-control" id="nom" placeholder="Ingrese su nombre">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">Contrasena</label>
+    <input type="password " ng-model="con" class="form-control" id="con" >
+  </div>
+  
+  <div class="form-group">
+    <label for="title" class="control-label">Telefono</label>
+    <input type="text" ng-model="tel" class="form-control" id="tel" placeholder="Ingrese su telefono">
+  </div>
+  
+  <div class="form-group">
+    <label for="title" class="control-label">Correo</label>
+    <input type="text" ng-model="cor" class="form-control" id="corr" placeholder="Ingrese su correo">
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="Agregar()" value="Save">
+</form>
+
+
+<table  border ="1">
+  <th>Nombre</th>
+  <th>Contrasena</th>
+  <th>Telefono</th>
+  <th>Correo</th> 
+  <th>Borrar</th> 
+   <tr ng-repeat="usuario in usuarios">
+    
+    <td>{{usuario.nombre}}</td>
+    <td>{{usuario.contrasena}}</td>
+    <td>{{usuario.telefono}}</td>
+    <td>{{usuario.correo}}</td>
+   
+    
+  </tr>
+ </table>
+</div>
+
+<script>
+var app = angular.module("clientApp", []);
+
+  app.controller("AgregarUsuariosCtrl", function ($scope) {
+  
+  
+  
+  
+  $scope.Agregar= function() {
+    $scope.usuarios.push({
+        nombre: $scope.nom,
+        contrasena: $scope.con,
+        telefono: $scope.tel,
+        correo: $scope.cor
+
+  });
+// Limpiar luego de insertar
+    $scope.nom = "";
+    $scope.con = "";
+ $scope.tel = "";
+ $scope.cor = "";
+
+
+ };
+ 
+
+  //$scope.usuarios = Usuario.getList().$object;
+});
+
+
+
+</script>
+
+</body>
+</html>

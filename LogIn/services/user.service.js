@@ -148,5 +148,6 @@ function update(_id, userParam) {
     }
 
     return deferred.promise;
+    
 }
 

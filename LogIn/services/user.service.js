@@ -6,7 +6,6 @@
 //Juan Carlos Tapia
 //Leonel Guillen
 
-
 var config = require('config.json');
 var _ = require('lodash');
 var jwt = require('jsonwebtoken');
@@ -22,6 +21,7 @@ service.authenticate = authenticate;
 service.getById = getById;
 service.create = create;
 service.update = update;
+service.delete = _delete;
 
 
 module.exports = service;
@@ -148,6 +148,18 @@ function update(_id, userParam) {
     }
 
     return deferred.promise;
-    
 }
 
+function _delete(_id) {
+    var deferred = Q.defer();
+ 
+    db.users.remove(
+        { _id: mongo.helper.toObjectID(_id) },
+        function (err) {
+            if (err) deferred.reject(err);
+ 
+            deferred.resolve();
+        });
+ 
+    return deferred.promise;
+}

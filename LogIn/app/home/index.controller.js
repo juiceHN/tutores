@@ -6,8 +6,10 @@
 //Juan Carlos Tapia
 //Leonel Guillen
 
-
 (function () {
+    
+    
+    
     'use strict';
 
     angular
@@ -22,8 +24,11 @@
         initController();
 
         function initController() {
-            // get current user
+            
+            
+            //Usuario actual logueado
             UserService.GetCurrent().then(function (user) {
+                //Almacenar usuario
                 vm.user = user;
             });
         }

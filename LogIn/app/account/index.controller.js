@@ -6,7 +6,8 @@
 //Juan Carlos Tapia
 //Leonel Guillen
 
-//Controlador Cuenta
+
+//Controlador de formulario
 (function () {
     'use strict';
 
@@ -16,7 +17,7 @@
 
     function Controller($window, UserService, FlashService) {
         var vm = this;
-
+        //Controlador buttons
         vm.user = null;
         vm.saveUser = saveUser;
         vm.deleteUser = deleteUser;
@@ -30,7 +31,10 @@
             });
         }
 
+
+        //Agregar usuario 
         function saveUser() {
+        	//Se utiiza el USer service, para hacer uptada
             UserService.Update(vm.user)
                 .then(function () {
                     FlashService.Success('User updated');

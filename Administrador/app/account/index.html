@@ -1,0 +1,31 @@
+
+<h1>Cuenta</h1>
+<!-- Entrada de una cuenta, Bootstrap, Guardar, Eliminar Usuarios --> 
+<div class="form-container">
+    <form method="post">
+        <div class="form-group">
+		
+	<!--   Etiqueta de primer nombre --> 
+            <label for="firstName">Nombre</label>
+			<!--  Input, --> 
+            <input type="text" id="firstName" class="form-control" ng-model="vm.user.firstName" required />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Apellidos</label>
+            <input type="text" id="lastName" class="form-control" ng-model="vm.user.lastName" required />
+        </div>
+        <div class="form-group">
+            <label for="username">Nombre de usuario</label>
+            <input type="text" id="username" class="form-control" ng-model="vm.user.username" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Contrasena</label>
+            <input type="password" id="password" class="form-control" ng-model="vm.user.password" />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.saveUser()">Guardar</button>
+			<button class="btn btn-danger" ng-click="vm.deleteUser()">Eliminar</button>
+            
+        </div>
+    </form>
+</div>
